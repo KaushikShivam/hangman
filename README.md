@@ -2,7 +2,7 @@
 
 [RollDice](https://youthful-lamport-b37d73.netlify.com/) is the classic hangman game built as an exercise for this [tutorial](https://www.udemy.com/course/modern-react-bootcamp/).
 
-![GameHub Screenshot](screenshot.png)
+![Hangman Screenshot](screenshot.png)
 
 ## Table of content
 
