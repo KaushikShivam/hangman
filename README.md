@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hangman - This is an exercise project that lets you pratice with props, defaultProps, state, and simple click events and a lot more in React.
 
-## Available Scripts
+[RollDice](https://youthful-lamport-b37d73.netlify.com/) is the classic hangman game built as an exercise for this [tutorial](https://www.udemy.com/course/modern-react-bootcamp/).
 
-In the project directory, you can run:
+![GameHub Screenshot](screenshot.png)
 
-### `yarn start`
+## Table of content
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Description](#description)
+- [Installation](#installation)
+- [Contact](#contact)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Description
 
-### `yarn test`
+The rules of the exercise are as follows
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Part One: Add A Key
 
-### `yarn build`
+Currently, the buttons don’t have a key prop. Fix this issue!
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Part Two: Number of Wrong Guesses
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Above the currently-guessed word, we’d like to show the number of wrong guesses, like “Number wrong: 3.” Add this.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Part Three: End Game on Loss
 
-### `yarn eject`
+The game only comes (by default) with 6 gallows images and therefore should only allow six wrong guesses. However, it allows players to keep making guesses after this (and there’s a bug, in that the gallows images disappears after there are too many wrong).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Change the behavior of the game so that after six wrong guesses, it no longer shows the button area. Instead, it should show the message “You lose” and reveal the correct word.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Do this without hard-coding “6” in as the number of guesses — instead, use the prop for maxGuesses.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Part Four: Alt Text
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Add an alt attribute to the hangman image that explains how many guesses have been made, inc case the images don’t load. Something like “5/6” or “5 wrong guesses”
 
-## Learn More
+### Part Five: Use a Random Word
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The game right now always uses the word “apple” as the secret word. There’s a file, words.js, with a list of words and a function to return a random word. Incorporate this so that the game uses this to choose a secret word.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Part Six: Add “Restart” Button
 
-### Code Splitting
+Add a button that will restart the game. This should pick a new random word and reset the guessed list and number of wrong guesses.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Further Study
 
-### Analyzing the Bundle Size
+Imagine that other games use a sequence of buttons with letters on them. It would be nice if the buttons could be reusable components.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Installation
 
-### Making a Progressive Web App
+1. Clone the project to your local directory
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+git clone https://github.com/KaushikShivam/hangman
+```
 
-### Advanced Configuration
+2. The project uses NPM for managing dependencies. Run npm install to install all the required dependencies
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+npm install
+```
 
-### Deployment
+3. Run the task runner to run the app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+npm run start
+```
 
-### `yarn build` fails to minify
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+You can contact me at:
+
+- [Portfolio](https://www.shivamkaushik.com)
+- [Email](mailto:shivamkaushikofficial@gmail.com)
+- [Linkedin](https://www.linkedin.com/in/kshivamdev/)
+- [Twitter](https://twitter.com/kShivamDev)
+- [Medium](https://medium.com/@shivamkaushikofficial)
+- [Angellist](https://angel.co/kshivamdev)
